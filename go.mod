@@ -1,6 +1,8 @@
 module github.com/prometheus/client_golang
 
-go 1.20
+go 1.22.0
+
+toolchain go1.24.3
 
 require (
 	github.com/beorn7/perks v1.0.1
