@@ -10,7 +10,7 @@ require (
 	github.com/klauspost/compress v1.18.1
 	github.com/prometheus/client_model v0.6.2
 	github.com/prometheus/common v0.67.2
-	github.com/prometheus/procfs v0.17.0
+	github.com/prometheus/procfs v0.19.2
 	golang.org/x/sys v0.37.0
 	google.golang.org/protobuf v1.36.10
 )
