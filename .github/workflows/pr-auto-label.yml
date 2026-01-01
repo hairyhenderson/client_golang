@@ -28,7 +28,7 @@ jobs:
             release-note-none
       - name: Add label to PR
         id: labeler
-        uses: jimschubert/labeler-action@v1
+        uses: jimschubert/labeler-action@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 # Adjust the configuration in /.github/labeler.yml
@@ -41,7 +41,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           allow_failure: true
       - name: Comment on Label Check Failure
-        uses: thollander/actions-comment-pull-request@v2.5.0
+        uses: thollander/actions-comment-pull-request@v3.0.1
         if: steps.preview_label_check.outputs.label_check == 'failure'
         with:
           message: |
@@ -49,7 +49,7 @@ jobs:
           comment_tag: labelfailure
           mode: recreate
       - name: Remove Label Check Failure Comment
-        uses: thollander/actions-comment-pull-request@v2.5.0
+        uses: thollander/actions-comment-pull-request@v3.0.1
         if: steps.preview_label_check.outputs.label_check == 'success'
         with:
           message: |
